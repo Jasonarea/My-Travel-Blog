@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Gapyeong with Purdue</title>
+	<style type="text/css">
+	#header {text-align:Left;
+			 background-image:url("headback.jpg");
+			 padding : 5px 10px ;
+			 background-repeat:no-repeat;
+			 background-position:right;
+			 background-color:darkred;
+			 height:170px;}
+	.fontchange{font-family:Lucida Handwriting;
+				font-size: 40pt;
+				color:#ffffff;}
+	#middle {border-top: solid black 2px;
+			 border-bottom: solid black 2px;
+			 border-left: dashed gray 2px;
+			 border-right:solid black spx;}
+	#leftnav {float:left;
+			  height:500px;
+			  width:200px;
+			  padding: 10px 5px 10px 5px;
+			  margin-top: 50px;}
+	ul {list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #00695c;
+		font-family: Script MT Bold}
+
+	li #login{color:navy;}
+	li a {display: block;
+		color: white;
+		padding: 8px 0 8px 16px;
+		text-decoration: none;
+		font-family: Script MT Bold
+		text-align:center;}
+	li a:visited{color:white;}
+	li a:active{color:white;}
+	
+	li a:hover {background-color: #4db6ac;
+				color: beige;
+				font-family: Script MT Bold}
+	li {border-bottom: 3px solid white;}
+	li.lulu {border:1px solid blue;}
+	li:last-child{border-bottom:none;}
+	
+	#contents     {width:auto;
+			  height:600;
+			  font-family:Georgia;
+			  padding-top:50px;}
+	th.Jason{font-family: Lucida Handwriting;
+			 font-size:30pt;
+			 text-align:left;}
+	table {margin: 20px 5px 10px 5px;
+		   border : silver 3px solid;
+		   background-color:#000000;
+		   font-family:Georgia;
+		   color:#ffffff;
+		   font-weight:bold;}
+	td {padding: 10px 10px 10px 10px;}
+	body{background-color:beige;} {}
+	#footer{text-align:center;
+			padding-top:5px;
+			font-family:times;
+			border-top: solid 3px silver;}
+	div.img {margin: 5px;
+			 border: 1px solid #ccc;
+			 float: left;
+			 width: 180px;}	
+
+	div.img:hover {border: 1px solid #777;}
+
+	div.img img {width: 100%;
+				height: auto;}
+
+	div.desc {padding: 15px;
+			text-align: center;}
+	div.textarea {font-family:times;}
+	.bluecolor{color:blue;}
+	p {color:green;
+	   font-weight:bold;}
+	span.clock {font-size : xx-large;
+		  color:white;
+		  text-align:right;
+		  background-color:darkred;}
+	</style>
+</head>
+<body>
+	<script>
+		var myClock=setInterval(clock,1000);
+		function clock(){
+			var now=new Date();
+			var day;
+			switch(now.getDay())
+			{
+				case 0:
+					day="Sleepy Sunday";
+					break;
+				case 1:
+					day="Blue Monday";
+					break;
+				case 2:
+					day="Ruby Tuesday";
+					break;
+				case 3:
+					day="Black Wednesday";
+					break;
+				case 4:
+					day="Envy Thursday";
+					break;
+				case 5:
+					day="Finally Friday";
+					break;
+				case 6:
+					day="Super Saturday";
+					break;}
+			var time=(now.getHours()+ " : "+now.getMinutes()+" : "+now.getSeconds() + " ("+day+")");
+			document.getElementById("hello").innerHTML=time;}
+				function Day(){
+				var now=new Date();
+				var Time;
+				var pop;
+				if (now.getHours()<=10)
+					Time="Good Morning!";
+				else if(now.getHours()>10 && now.getHours()<=16)
+					Time="Have a Good day!";
+				else if(now.getHours()>16 && now.getHours()<=24)
+					Time="Good Evening!";
+				alert(Time + "\n" + (now.getMonth()+1) + "월 " + now.getDate() +"일");}
+				function Lalla(){
+				var x=document.getElementById("hello");
+				x.style.color ="yellow";
+				x.style.backgroundColor="darkred";}
+			function Lalla2(){
+				var x=document.getElementById("hello");
+				x.style.color ="white";
+				x.style.backgroundColor="darkred";}
+	</script>
+	<div id="header">
+		<h1 class="fontchange"><b>WELCOME TO JASON'S HOMEPAGE</b><br><span class="clock" id="hello" onclick="Day()" onmouseover="Lalla()" onmouseout="Lalla2()"></span></h1>
+	</div>
+	<div id="middle">
+		<div id="leftnav">
+		<ul>
+			<li><a href="About Jason.html" target="_self">About Jason</a></li>
+			<li><a href="Beautiful Chicago.html" target="_self">Beautiful Chicago</a></li>
+			<li><a href="Awesome Japan.html"target="_self">Awesome Japan</a></li>
+			<li><a href="Gapyeong with Purdue.html"target="_self">Gapyeong with Purdue</a></li>
+			
+		</ul>
+		<br>
+		<ul class="login">
+			<li class="lulu"><a href="Login.html" target="_self">Login Page</a></li>
+		</ul>
+		<br>
+		<script>
+			function go_back(){
+				window.history.back();}
+			function go_forward(){
+				window.history.forward();}
+		</script>
+		<table border="1">
+			<tr>
+				<td><input type="button" value="Back" onclick="go_back()"></td>
+				<td><input type="button" value="Forward" onclick="go_forward()"></td>
+			</tr>
+		</table>
+		</div>	
+		<div id="contents">
+		
+			<div class="img">
+				<a target="_blank" href="gp4.jpg">
+				<img src="gp4.jpg" alt="Navy pier" width="300" height="200"></a>
+				<div class="desc">Firework_Purdue</div>
+			</div>
+		<div class="img">
+				<a target="_blank" href="gp3.jpg">
+				<img src="gp3.jpg" alt="Field museum" width="300" height="200"></a>
+				<div class="desc">Let's go Gapyeong</div>
+			</div>
+			
+			<div class="img">
+				<a target="_blank" href="gp2.jpg">
+				<img src="gp2.jpg" alt="basketball" width="300" height="200"></a>
+				<div class="desc">Arrive at Gapyeong</div>
+			</div>
+			<div class="img">
+				<a target="_blank" href="gp1.jpg">
+				<img src="gp1.jpg" alt="Shedd" width="300" height="200"></a>
+				<div class="desc">In the Accomodation</div>
+			</div>
+			<script>
+				function rabbit(){
+					var a=document.getElementById("ever1").value;
+					var b=document.getElementById("ever2").value;
+					var c=document.getElementById("ever3").value;
+					var d=document.getElementById("ever4").value;
+					var e=document.getElementById("ever5").value;
+					var array = new Array;
+					array[0]=a;
+					array[1]=b;
+					array[2]=c;
+					array[3]=d;
+					array[4]=e;
+					var Juicy=array.join(",");
+					alert("You have been to \n" + Juicy);
+					alert("I want to go there...");}
+				function reset(){
+					var a=document.getElementById("ever1").value="";
+					var b=document.getElementById("ever2").value="";
+					var c=document.getElementById("ever3").value="";
+					var d=document.getElementById("ever4").value="";
+					var e=document.getElementById("ever5").value="";}
+			</script>
+			<table>
+				<tr><td>Have you ever been to Gapyeong?<br>Except the Gapyeong, <br>Where have you been?<br>Please tell me 5.</td></tr>
+				<tr><td><input id="ever1" type="text" size="3"><input type="text"id="ever2"  size="3"><input id="ever3" type="text" size="3"><input id="ever4" type="text" size="3"><input id="ever5" type="text" size="3"></td></tr>
+				<tr><td><input type="button" value="Here you are" onclick="rabbit()">&nbsp;&nbsp;<input type="button" value="Reset" onclick="reset()"/></td></tr></table>
+			<table>
+				<tr>
+					<td>I went to Gapyeong with my friends who went to Chicago with me.<br>
+					It was very fun. We took ITX-CheongChun which is departing from<br>
+					Yongsan to ChunCheon. We had Samgyupsal Party and Happy Fireworks<br>
+					Since I had to go because of schedule, I didn't want to leave there<br>
+					I love traveling very much. Thank you.</td>
+					<td><img src="gp8.jpg" alt="Gapyeong" width="220" height="100px"></td>
+				</tr>
+			</table>
+		<div id="footer">
+			<h4>&copy;copyright. Jason_Jung<br>All rights reserved</h4>
+		</div>
+</body>
+</html>

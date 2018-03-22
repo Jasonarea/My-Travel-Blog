@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<style type="text/css">
+		#div1{ height:100px;
+			  border-bottom :2px silver solid;
+			  background-color: black;}
+		#div2{margin-top:30px;
+			  height:200px;
+			  text-align:center;}
+		h1{font-family: Lucida Handwriting;
+		   color:pink;}
+		body{background-color: #000000;}
+		td{color:#ffffff;
+		   font-family:times;}
+		p{font-size:xx-large;
+		  font-weight:bold;}
+		h2{color:white;}
+		h3.lol {color:yellow;
+			   font-size:large;
+				font-family:times;}
+		p:first-line {color:lightgreen;
+					font-variant:small-caps;}
+		p:first-letter{font-size:xx-large;}
+		body{background-image:url("gp4.jpg");}
+	</style>
+	<script>
+	function validateForm() {
+    var x = document.forms["myForm"]["lastname"].value;
+	var y = document.forms["myForm"]["firstname"].value;
+	var z = document.forms["myForm"]["Email"].value;
+    if (x == null || x == "") {
+        alert("Last Name must be filled out");
+        return false;
+		}
+	else if	(y == null || y== ""){
+		alert("First Name must be filled out");
+		return false;
+		}
+	else if (z == null || z== ""){
+		alert("Email must be filled out");
+		return false;
+		}
+	}
+	function myGoogle() {
+    var myWindow = window.open("http://www.google.com","http://www.google.com","width=200,height=100");
+	}
+	function myNaver() {
+    var myWindow = window.open("http://www.naver.com","http://www.naver.com","width=200,height=100");
+	}
+	function mouseOver(elem) {elem.innerHTML = "Welcome<br>Please Log In";
+							  elem.style.backgroundColor = "black";
+							  elem.style.textAlign="center";
+							  elem.style.fontFamily="Lucida Handwriting";
+							  elem.style.fontSize="xx-large";
+							  elem.style.color="lightblue";
+							  elem.style.fontWeight="bold";
+							  elem.style.paddingTop ="10px";
+							  elem.style.height="103px"}
+	function mouseOut(elem) {elem.innerHTML ="Welcome<br>Please Log In";
+							 elem.style.textAlign="center";
+							 elem.style.fontFamily="Lucida Handwriting";
+							 elem.style.color="lightpink";
+							 elem.style.fontSize="xx-large";
+							 elem.style.fontWeight="bold";
+							 elem.style.backgroundColor="black";
+							 elem.style.paddingTop ="10px";
+							 elem.style.height="103px";}
+	
+	</script>
+</head>
+<body>
+	<div id="div1" onmouseover = "mouseOver(this)" onmouseout ="mouseOut(this)">
+	<center>
+	<h1>Welcome<br>Please Log In</h1>
+	<br>
+	</div>
+	<div id="div2">
+	<center>
+	
+	<table>
+		<tr>
+			<td><br><br><br>
+				<a href="http://sw.gachon.ac.kr/" target="_block"><img src="Software Logo.png" alt="hi" width="300"></a>
+				<br>
+				<button onclick="myGoogle()">Go Google.</button>
+				<button onclick="myNaver()">Go Naver</button>
+				<p>Hello. If you log in,<br>
+				you can see the Jason's homepage</p></td>
+		</tr>
+		<tr>
+			<td><form name="myForm" action="About Jason.html" onsubmit="return validateForm()" method="post">
+			Last name: 
+				<input type="text" name="lastname">
+			<br><br>
+			First name:
+				<input type="text" name="firstname">
+			<br><br>
+			E-mail:
+				<input type="text" name="Email"/>
+			
+			<br><br>
+			Gender:
+			<select name="gender">
+				<option value="Male" Selected>Male
+				<option value="Female">Female
+			</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="submit" value="Log in">
+			<p id="validate"></p>
+			</form></td>
+			<td>
+				<script>
+		var myClock;
+		function clock(){
+			var now=new Date();
+			var day;
+			switch(now.getDay())
+			{
+				case 0:
+					day="Sun";
+					break;
+				case 1:
+					day="Mon";
+					break;
+				case 2:
+					day="tue";
+					break;
+				case 3:
+					day="Wed";
+					break;
+				case 4:
+					day="Thu";
+					break;
+				case 5:
+					day="Fri";
+					break;
+				case 6:
+					day="Sat";
+					break;}
+			var time=(now.getHours()+" : "+now.getMinutes()+" : "+now.getSeconds()+" ( "+day+" )");
+			document.getElementById("Now").innerHTML=time;}
+	</script>
+	<h2>Current Time <br></h2>
+	<h3 class="lol" id="Now">Press the start</h3>
+	<input type="button" value="Start" onclick="myClock=setInterval('clock()',1000)"/>
+	<input type="button" value="Stop" onclick="clearInterval(myClock)"/></td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

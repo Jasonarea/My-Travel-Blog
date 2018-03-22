@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Awesome Japan</title>
+	<style type="text/css">
+	#header {text-align:Left;
+			 background-image:url("headback.jpg");
+			 background-repeat:no-repeat;
+			 background-position:right;
+			 background-color:darkred;
+			 padding : 5px 10px ;
+			 height:170px;}
+	.fontchange{font-family:Lucida Handwriting;
+				font-size: 40pt;
+				color:#ffffff;}
+	#middle {border-top: solid black 2px;
+			 border-bottom: solid black 2px;
+			 border-left: dashed gray 2px;
+			 border-right:solid black spx;}
+	#leftnav {float:left;
+			  height:550px;
+			  width:200px;
+			  padding: 10px 5px 10px 5px;
+			  margin-top: 50px;
+			  border-bottom: white;}
+	ul {list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #00695c;
+		font-family: Script MT Bold}
+
+	li #login{color:navy;}
+	li a {display: block;
+		color: white;
+		padding: 8px 0 8px 16px;
+		text-decoration: none;
+		font-family: Script MT Bold
+		text-align:center;}
+	li a:visited{color:white;}
+	li a:active{color:white;}
+	
+	li a:hover {background-color: #4db6ac;
+				color: beige;
+				font-family: Script MT Bold}
+	li {border-bottom: 3px solid white;}
+	li.lulu {border:1px solid blue;}
+	li:last-child{border-bottom:none;}
+	
+	#contents{width:auto;
+			  height:550px;
+			  font-family:Georgia;
+			  margin-top:50px;}
+	th.Jason{font-family: Lucida Handwriting;
+			 font-size:30pt;
+			 text-align:left;}
+	table {margin: 20px 5px 10px 5px;
+		   border : silver 3px solid;
+		   background-color:black;
+		   font-family:MV Boli;
+		   color:white;
+		   font-weight:bold;}
+	td:first-line {color:orange;
+					font-variant:small-caps;}
+	td:first-letter{font-size:xx-large;}
+	td {padding: 10px 10px 10px 10px;}
+	body{background-color:beige;} {}
+	#footer{text-align:center;
+			padding-top:5px;
+			font-family:times;
+			border-top: solid 3px silver;}
+	.font{font-family:Georgia;
+		  font-size: small !important;
+		  color:white;}
+	td:first-letter{color:yellow !important ;}
+	span.clock {font-size : xx-large;
+		  color:white;
+		  text-align:left;
+		  background-color:darkred;}
+	span.radio {color: beige;
+				font-style:italic;
+				font-size:xx-large;}
+	table.why {background-color:lightgray;
+			   color:black;
+			   font-family:times;
+			   width: 170px;
+			   height:200px;}
+	</style>
+	<script>
+		var howmany=0;
+		function howMany(){
+			howmany=howmany+1;
+			var x=document.getElementById("submit");
+			x.innerHTML=howmany;
+			}
+		
+	</script>
+</head>
+<body>
+	<script>
+		var myClock=setInterval(clock,1000);
+		function clock(){
+			var now=new Date();
+			var day;
+			switch(now.getDay())
+			{
+				case 0:
+					day="Sleepy Sunday";
+					break;
+				case 1:
+					day="Blue Monday";
+					break;
+				case 2:
+					day="Ruby Tuesday";
+					break;
+				case 3:
+					day="Black Wednesday";
+					break;
+				case 4:
+					day="Envy Thursday";
+					break;
+				case 5:
+					day="Finally Friday";
+					break;
+				case 6:
+					day="Super Saturday";
+					break;}
+			var time=(now.getHours()+ " : "+now.getMinutes()+" : "+now.getSeconds() + " ("+day+")");
+			document.getElementById("hello").innerHTML=time;}
+				function Day(){
+				var now=new Date();
+				var Time;
+				var pop;
+				if (now.getHours()<=10)
+					Time="Good Morning!";
+				else if(now.getHours()>10 && now.getHours()<=16)
+					Time="Have a Good day!";
+				else if(now.getHours()>16 && now.getHours()<=24)
+					Time="Good Evening!";
+				alert(Time + "\n" + (now.getMonth()+1) + "월 " + now.getDate() +"일");}
+				function Lalla(){
+				var x=document.getElementById("hello");
+				x.style.color ="yellow";
+				x.style.backgroundColor="darkred";}
+			function Lalla2(){
+				var x=document.getElementById("hello");
+				x.style.color ="white";
+				x.style.backgroundColor="darkred";}
+	</script>
+	<div id="header">
+		<h1 class="fontchange"><b>WELCOME TO JASON'S HOMEPAGE</b><br><span class="clock" id="hello" onclick="Day()" onmouseover="Lalla()" onmouseout="Lalla2()"></span></h1>
+	</div>
+	<div id="middle">
+		<div id="leftnav">
+		<ul>
+			<li><a href="About Jason.html" target="_self">About Jason</a></li>
+			<li><a href="Beautiful Chicago.html" target="_self">Beautiful Chicago</a></li>
+			<li><a href="Awesome Japan.html"target="_self">Awesome Japan</a></li>
+			<li><a href="Gapyeong with Purdue.html"target="_self">Gapyeong with Purdue</a></li>
+			
+		</ul>
+		<br>
+		<ul class="login">
+			<li class="lulu"><a href="Login.html" target="_self">Login Page</a></li>
+		</ul>
+		<br>
+				<script>
+				function plus()
+				{
+					var va1=document.getElementById("v1");
+					var va2=document.getElementById("v2");
+					var result=document.getElementById("re");
+					result.value= Number(va1.value) + Number(va2.value);
+				}
+
+				function minus()
+				{
+					var va1=document.getElementById("v1");
+					var va2=document.getElementById("v2");
+					var result=document.getElementById("re");
+					result.value= Number(va1.value) - Number(va2.value);
+				}
+
+				function multipl()
+				{
+					var va1=document.getElementById("v1");
+					var va2=document.getElementById("v2");
+					var result=document.getElementById("re");
+					result.value= Number(va1.value) * Number(va2.value);
+				}
+
+				function division()
+				{
+					var va1=document.getElementById("v1");
+					var va2=document.getElementById("v2");
+					var result=document.getElementById("re");
+					result.value= Number(va1.value) / Number(va2.value);
+				}
+
+				function remind()
+				{
+					var va1=document.getElementById("v1");
+					var va2=document.getElementById("v2");
+					var result=document.getElementById("re");
+					result.value= Number(va1.value) % Number(va2.value);
+				}
+		</script>
+		<table border = 1>
+			<tr>
+				<td><input type="text" size=5 id="v1"></td>
+				<td><input type="text" size=5 id="v2"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="+" id="pl" onclick="plus();">
+					<input type="button" value="-" id="mi" onclick="minus();">
+					<input type="button" value="*" id="mu" onclick="multipl();">
+					<input type="button" value="/" id="di" onclick="division();">
+					<input type="button" value="%" id="mo" onclick="remind();">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="text" size=15 id="re">
+				</td>
+			</tr>
+		</table>
+				<script>
+			function go_back(){
+				window.history.back();}
+			function go_forward(){
+				window.history.forward();}
+		</script>
+		<table border="1">
+			<tr>
+				<td><input type="button" value="Back" onclick="go_back()"></td>
+				<td><input type="button" value="Forward" onclick="go_forward()"></td>
+			</tr>
+		</table>
+		</div>	
+		<div id="contents">
+			<table>
+				<tr>
+					<td><a target="_blank" href="japan5.jpg">
+					<img src="japan5.jpg" width="150" height="200"></a>
+					<a target="_blank" href="japan3.jpg">
+					<img src="japan3.jpg" width="150" height="200"></a></td>
+					<td>After I finished the military service,<br> I went to Japan by myself<br>
+						last August. I used Japan Airline from<br> Gimpo Airport to Haneda,Tokyo.<br>
+						I love flight and their food was so nice.<br> The flight attendant was <br>
+						very kind and the plain was extremely clean.<br> I loved it.
+					</td>
+					<td class="font"><form>
+						<p>Have you ever been to Japan?<br> How was it? <br>
+						If you have not been, do you want to?<br></p>
+						
+							<input type="radio" name="Japan" value="fun">Yes. It was fun.<br>
+							<input type="radio" name="Japan" value="dis">Yes, but it was dissapointed.<br>
+							<input type="radio" name="Japan" value="want">No, but I want to go.<br>
+							<input type="radio" name="Japan" value="hate">No, I don't like Japan<br>
+							<input id="check" type="checkbox" name="Japan" value="withme" CHECKED>
+							Check if you want to go Japan with me!!<br><br>
+							<input type="button" value="Submit" onclick="howMany()"> 참가자수 : <span class="radio" id="submit">0</span>
+						</form>
+						</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>There were so many sightseeings and tourist attractions<br>
+						I went to Tokyo and watched the city view at the Tokyo Tower<br>
+						and I took the Night bus which is driving long distance at night<br>
+						I moved from Tokyo to Kyoto and I watched so many temples<br>
+						especially Kiyomizudera.<br>
+						After coming back from Japan, I became loving self-trip.<br>
+						I went to Daegu by myself recently and met friends there<br>
+						Soooo interesting, isn't it? I want to go Japan again.
+					</td>
+					<td><a target="_blank" href="japan4.jpg">
+					<img src="japan4.jpg" width="170" height="200"></a>
+					<a target="_blank" href="japan2.jpg">
+					<img src="japan2.jpg" width="170" height="200"></a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="footer">
+			<h4>&copy;copyright. Jason_Jung<br>All rights reserved</h4>
+		</div>
+</body>
+</html>

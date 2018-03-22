@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Beautiful Chicago</title>
+	<style type="text/css">
+	#header {text-align:Left;
+			 background-image:url("headback.jpg");
+			 padding : 5px 10px;
+			 height:170px;
+			 background-repeat:no-repeat;
+			 background-color:darkred;
+			 background-position:right;}
+	.fontchange{font-family:Lucida Handwriting;
+				font-size: 40pt;
+				color:#ffffff;}
+	#middle {border-top: solid black 2px;
+			 border-bottom: solid black 2px;
+			 border-left: dashed gray 2px;
+			 border-right:solid black spx;}
+	#leftnav {float:left;
+			  height:500px;
+			  width:200px;
+			  padding: 10px 5px 10px 5px;
+			  margin-top: 50px;}
+	ul {list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 200px;
+		background-color: #00695c;
+		font-family: Script MT Bold}
+
+	li #login{color:navy;}
+	li a {display: block;
+		color: white;
+		padding: 8px 0 8px 16px;
+		text-decoration: none;
+		font-family: Script MT Bold
+		text-align:center;}
+	li a:visited{color:white;}
+	li a:active{color:white;}
+	
+	li a:hover {background-color: #4db6ac;
+				color: beige;
+				font-family: Script MT Bold}
+	li {border-bottom: 3px solid white;}
+	li.lulu {border:1px solid blue;}
+	li {border-bottom: 3px solid white;}
+	li:last-child{border-bottom:none;}
+	li a.login{background-color:Beige;
+				color: black;}
+	#contents{width:auto;
+			  height:470px;
+			  font-family:Georgia;
+			  padding-top:50px;}
+	th.Jason{font-family: Lucida Handwriting;
+			 font-size:30pt;
+			 text-align:left;}
+	table {margin: 20px 5px 10px 5px;
+		   border : silver 3px solid;
+		   background-color:#000000;
+		   font-family:Georgia;
+		   color:#ffffff;
+		   font-weight:bold;}
+	td {padding: 10px 10px 10px 10px;}
+	body{background-color:beige;} {}
+	#footer{text-align:center;
+			padding-top:5px;
+			font-family:times;
+			border-top: solid 3px silver;}
+	div.img {margin: 5px;
+			 border: 1px solid #ccc;
+			 float: left;
+			 width: 180px;}	
+
+	div.img:hover {border: 1px solid #777;}
+
+	div.img img {width: 100%;
+				height: auto;}
+
+	div.desc {padding: 15px;
+			text-align: center;}
+	div.textarea {font-family:times;}
+	.bluecolor{color:blue;}
+	span.clock {font-size : xx-large;
+		  color:white;
+		  text-align:left;
+		  background-color:darkred;}
+	p.descr {color: navy;
+			 background-color:white;}
+	</style>
+</head>
+<body>
+	<script>
+		var myClock=setInterval(clock,1000);
+		function clock(){
+			var now=new Date();
+			var day;
+			switch(now.getDay())
+			{
+				case 0:
+					day="Sleepy Sunday";
+					break;
+				case 1:
+					day="Blue Monday";
+					break;
+				case 2:
+					day="Ruby Tuesday";
+					break;
+				case 3:
+					day="Black Wednesday";
+					break;
+				case 4:
+					day="Envy Thursday";
+					break;
+				case 5:
+					day="Finally Friday";
+					break;
+				case 6:
+					day="Super Saturday";
+					break;}
+			var time=(now.getHours()+ " : "+now.getMinutes()+" : "+now.getSeconds() + " ("+day+")");
+			document.getElementById("hello").innerHTML=time;}
+				function Day(){
+				var now=new Date();
+				var Time;
+				var pop;
+				if (now.getHours()<=10)
+					Time="Good Morning!";
+				else if(now.getHours()>10 && now.getHours()<=16)
+					Time="Have a Good day!";
+				else if(now.getHours()>16 && now.getHours()<=24)
+					Time="Good Evening!";
+				alert(Time + "\n" + (now.getMonth()+1) + "월 " + now.getDate() +"일");}
+			function Lalla(){
+				var x=document.getElementById("hello");
+				x.style.color ="yellow";
+				x.style.backgroundColor="darkred";}
+			function Lalla2(){
+				var x=document.getElementById("hello");
+				x.style.color ="white";
+				x.style.backgroundColor="darkred";}
+	</script>
+	<div id="header">
+		<h1 class="fontchange"><b>WELCOME TO JASON'S HOMEPAGE</b><br><span class="clock" id="hello" onclick="Day()" onmouseover="Lalla()" onmouseout="Lalla2()"></span></h1>
+	</div>
+	<div id="middle">
+		<div id="leftnav">
+		<ul>
+			<li><a href="About Jason.html" target="_self">About Jason</a></li>
+			<li><a href="Beautiful Chicago.html" target="_self">Beautiful Chicago</a></li>
+			<li><a href="Awesome Japan.html"target="_self">Awesome Japan</a></li>
+			<li><a href="Gapyeong with Purdue.html"target="_self">Gapyeong with Purdue</a></li>
+			
+		</ul>
+		<br>
+		<ul class="login">
+			<li class="lulu"><a href="Login.html" target="_self">Login Page</a></li>
+		</ul>
+		<br>
+		
+		<p class="descr"><b><U>1. You can see the description of travel, if you click the picture<br><br>2. You can close the description window, if you click the name tag</U></b></p>
+				<script>
+			function go_back(){
+				window.history.back();}
+			function go_forward(){
+				window.history.forward();}
+		</script>
+		<table border="1">
+			<tr>
+				<td><input type="button" value="Back" onclick="go_back()"></td>
+				<td><input type="button" value="Forward" onclick="go_forward()"></td>
+			</tr>
+		</table>
+		</div>	
+		<div id="contents">
+			<script>
+				var Field;
+
+				function openWin() {
+					Field = window.open("", "Field", "width=200,height=100");
+					Field.document.write("<p>I went to Field museum which is very<br>famous because of the <br>Movie 'The museum is alive'<br>There were many kinds of dinosaurs<br> and the excavated article, remains.<br>It was amazing us and<br>let us know about lots of ancient <br>creatures and extinct creatures<br>");
+				}
+
+				function closeWin() {
+					Field.close();
+				}
+				var Basketball;
+
+				function basketball() {
+					Basketball = window.open("", "Basketball", "width=200,height=100");
+					Basketball.document.write("I went to basketball playground<br>which is in Purdue University's Macky Arena<br>There are lot's of people<br>The cheering is hot and fun<br>then Our team won, so many people<br>became happy<br>It was funny experience for me.");
+				}
+
+				function closeBasket() {
+					Basketball.close();
+				}
+				var Shedd;
+
+				function openShedd() {
+					Shedd = window.open("", "Shedd", "width=200,height=100");
+					Shedd.document.write("I went to Shedd Aquarium.<br> There are various kinds of fishes and creatures<br>and there is a theatre where<br>we can watch the documentary in 3D<br>So fun, isn't it?<br>Above all, there is dolphin show<br>and lots of program we can do.");
+				}
+
+				function closeShedd() {
+					Shedd.close();
+				}
+				var Skydeck;
+
+				function openSkydeck() {
+					Skydeck = window.open("", "Skydeck", "width=200,height=100");
+					Skydeck.document.write("I went to Skydeck. It is observatory.<br>We can see the landscape of Chicago<br>The view was sooo nice.<br>and all area around me was glasses even floor.<br>It was little scared but so nice experience for me.");
+				}
+
+				function closeSkydeck() {
+					Skydeck.close();
+				}
+				var Gate;
+
+				function openGate() {
+					Gate = window.open("", "Gate", "width=200,height=100");
+					Gate.document.write("<p>I went to Cloud gate called Giant bean. <br>It is very famous because of movie Inception.<br>The weather was nice and we took the many photoes<br>The Giant Bean was like mirror<br>So beautiful.");
+				}
+
+				function closeGate() {
+					Gate.close();
+				}
+				var Pier;
+
+				function openPier() {
+					Pier = window.open("", "Pier", "width=200,height=100");
+					Pier.document.write("<p>I went to Navy Pier. It was the best tourist attraction in Chicago. The weather was so great and Chicago City had great buildings and bridge and view. The pier had so nice ocean and The scenary was awesome.");
+				}
+
+				function closePier() {
+					Pier.close();
+				}
+				var Art;
+
+				function openArt() {
+					Art = window.open("", "Art", "width=200,height=100");
+					Art.document.write("<p>I went to Chicago Contemporary Art Museum. It was first time for me to go art museum. I thought that art is so boring. However the contemporary art museum made me familiar with art. Their product was so fun and interesting. Especially all of the internal disign was white. and so tidy. It was inspiring me well.");
+				}
+
+				function closeArt() {
+					Art.close();
+				}
+				</script>
+			<div class="img">
+				<img  src="Field museum.png" alt="Field museum" width="300" height="200" onclick="openWin()"><a id ="field"></a>
+				<div class="desc" onclick="closeWin()">Field Museum</div>
+			</div>
+			<div class="img">
+				<img src="basketball.png" alt="basketball" width="300" height="200" onclick="basketball()">
+				<div class="desc" onclick="closeBasket()">Basketball Play</div>
+			</div>
+			<div class="img">
+				<img src="Shedd.png" alt="Shedd" width="300" height="200" onclick="openShedd()">
+				<div class="desc" onclick="closeShedd()">Shedd Aquarium</div>
+			</div>
+			<div class="img">
+				<img src="Skydeck.png" alt="Skydeck" width="300" height="200" onclick="openSkydeck()"></a>
+				<div class="desc" onclick="closeSkydeck()">Skydeck</div>
+			</div>
+			<div class="img">
+				<img src="bean.png" alt="Giant bean" width="300" height="200" onclick="openGate()">
+				<div class="desc" onclick="closeGate()">Cloud Gate in Chicago</div>
+			</div>
+			<div class="img">
+				<img src="Navy.png" alt="Navy pier" width="300" height="200" onclick="openPier()"></a>
+				<div class="desc" onclick="closePier()">Navy Pier</div>
+			</div>
+			<div class="img">
+				<img src="pop.png" alt="pop art" width="300" height="200" onclick="openArt()"></a>
+				<div class="desc" onclick="closeArt()">Chicago Contemporary Art Museum</div>
+			</div>
+			<script>
+			function Frodo(){
+				x=document.getElementById("Lollo");
+				x.src="Frodo.png";}
+			function Neo(){
+				x=document.getElementById("Lollo");
+				x.src="Neo.png";}
+			function Tube(){
+				x=document.getElementById("Lollo");
+				x.src="tube.png";}
+			function  JayG(){
+				x=document.getElementById("Lollo");
+				x.src="JayG.png";}
+			function  Ryan(){
+				x=document.getElementById("Lollo");
+				x.src="Lion.png";}
+			function Apeach(){
+				x=document.getElementById("Lollo");
+				x.src="Apeach.png";}
+			function Mooji(){
+				x=document.getElementById("Lollo");
+				x.src="Mooji.jpg"}
+			
+			</script>
+				<table>
+					<tr>
+						<td>I went to Purdue Univ. in Indiana,Hammond near Chicago.<br>
+					For 3 weeks, we've experienced a lot of things.<br>
+					We learned English, travled Chicago which was so beautiful.<br>
+					and Know about American culture.<br>
+					I was so inspiring about the travel to America.<br>
+					I want to go there again in the future<br><br>
+					<input type="button" onclick="Frodo()" value="Frodo"/>
+					&nbsp;<input type="button" onclick="Neo()" value="Neo"/>
+					&nbsp;<input type="button" onclick="Tube()" value="Tube"/>
+					&nbsp;<input type="button" onclick="JayG()" value="JayG"/>
+					&nbsp;<input type="button" onclick="Ryan()" value="Ryan"/>
+					&nbsp;<input type="button" onclick="Apeach()" value="Apeach"/>
+					&nbsp;<input type="button" onclick="Mooji()" value="Muji & Con"/></td>
+						<td><img id="Lollo" src="Lion.png"></td>
+					</tr>
+					
+				</table>
+				
+		</div>
+	</div>
+		<div id="footer">
+			<h4>&copy;copyright. Jason_Jung<br>All rights reserved</h4>
+		</div>
+</body>
+</html>
